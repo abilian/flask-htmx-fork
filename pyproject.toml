@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "flask-htmx"
-version = "0.1.1"
-description = "A Flask extension to work with HTMX."
+name = "flask-htmx-fork"
+version = "0.2"
+description = "A Flask extension to work with HTMX. Forked."
 authors = ["Edmond Chuc <edmond.chuc@gmail.com>"]
 license = "MIT"
 readme = "README.rst"
@@ -25,7 +25,8 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-Flask = "^2.0.2"
+Flask = ">2.0.2"
+ruff = "^0.1.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
