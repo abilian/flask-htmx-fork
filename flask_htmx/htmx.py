@@ -29,7 +29,6 @@ class HTMX:
         def htmx_context_processor():
             return {"htmx": self}
 
-
     @property
     def boosted(self) -> bool:
         """:py:obj:`True` if the request came from an element with the `hx-boost`

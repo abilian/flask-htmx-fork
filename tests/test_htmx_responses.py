@@ -14,6 +14,7 @@ def test_htmx_response_stop_polling(client: FlaskClient):
     rv = client.get("/hx-trigger-stop-polling")
     assert rv.status_code == 286
 
+
 @pytest.mark.parametrize(
     "body, data",
     [

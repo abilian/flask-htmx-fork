@@ -5,7 +5,6 @@ from flask_htmx import HTMX
 from flask_htmx.responses import HTMXResponseClientRedirect, HTMXResponseStopPolling
 
 
-
 @pytest.fixture(scope="session")
 def flask_app():
     app = Flask(__name__)
@@ -54,7 +53,8 @@ def flask_app():
 
     yield app
 
-@pytest.fixture(scope="function")
+
+@pytest.fixture()
 def client(flask_app):
     with flask_app.test_client() as client:
-        yield client
+        return client

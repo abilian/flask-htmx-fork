@@ -91,28 +91,39 @@ def make_response(
             f"Invalid reswap value. Must be one of {RESWAPS} (or None to ignore)."
         )
     resp = flask_make_response(*args)
+
     if location:
         resp.headers["HX-Location"] = _stringify(location)
+
     if push_url:
         resp.headers["HX-Push-Url"] = push_url
     elif push_url is False:
         resp.headers["HX-Push-Url"] = HX_FALSE
+
     if redirect:
         resp.headers["HX-Redirect"] = redirect
+
     if refresh:
         resp.headers["HX-Refresh"] = HX_TRUE
+
     if replace_url:
         resp.headers["HX-Replace-Url"] = replace_url
     elif replace_url is False:
         resp.headers["HX-Replace-Url"] = HX_FALSE
+
     if reswap:
         resp.headers["HX-Reswap"] = reswap
+
     if retarget:
         resp.headers["HX-Retarget"] = retarget
+
     if trigger:
         resp.headers["HX-Trigger"] = _stringify(trigger)
+
     if trigger_after_settle:
         resp.headers["HX-Trigger-After-Settle"] = _stringify(trigger_after_settle)
+
     if trigger_after_swap:
         resp.headers["HX-Trigger-After-Swap"] = _stringify(trigger_after_swap)
+
     return resp
