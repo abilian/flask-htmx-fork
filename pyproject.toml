@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flask-htmx-fork"
-version = "0.2.1"
+version = "0.2.2"
 description = "A Flask extension to work with HTMX. Forked."
 authors = ["Edmond Chuc <edmond.chuc@gmail.com>"]
 license = "MIT"
