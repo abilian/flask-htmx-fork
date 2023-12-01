@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flask-htmx-fork"
-version = "0.2"
+version = "0.2.1"
 description = "A Flask extension to work with HTMX. Forked."
 authors = ["Edmond Chuc <edmond.chuc@gmail.com>"]
 license = "MIT"
@@ -26,17 +26,22 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.8"
 Flask = ">2.0.2"
-ruff = "^0.1.6"
 
 [tool.poetry.dev-dependencies]
+# Checking
+ruff = "^0.1.6"
+pre-commit = ">=2.20.0"
+
+# Testing
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 pytest-mock = "^3.6.1"
+
+# Doc
 Sphinx = "^4.4.0"
 furo = "^2022.1.2"
 sphinx-autobuild = "^2021.3.14"
 sphinx-copybutton = "^0.4.0"
-pre-commit = ">=2.20.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
